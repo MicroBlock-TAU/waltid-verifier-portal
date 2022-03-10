@@ -15,7 +15,9 @@
             </p>
             <p>
               <a :href="'/verifier-api/present/?walletId=' + wallets[0].id + '&schemaUri=' + vidSchemaUri" class="btn btn-primary my-2 fw-bold _btn">Connect Wallet using <b>Verifiable ID</b></a>
-              <a :href="'/verifier-api/present/?walletId=' + wallets[0].id + '&schemaUri=' + bidSchemaUri" class="btn btn-success my-2 fw-bold _btn">Connect Wallet using <b>Bank ID</b></a>
+              <a :href="'/verifier-api/present/?walletId=' + wallets[0].id +
+              '&schemaUri=' + europassSchemaUri" class="btn btn-success my-2
+              fw-bold _btn">Connect Wallet using <b>europass credential</b></a>
             </p>
             <p class="text-muted fw-bold">© 2022 walt.id</p>
           </div>
@@ -29,7 +31,8 @@ export default {
   data () {
     return {
       vidSchemaUri: 'https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0xb77f8516a965631b4f197ad54c65a9e2f9936ebfb76bae4906d33744dbcc60ba',
-      bidSchemaUri: 'https://raw.githubusercontent.com/walt-id/waltid-ssikit-vclib/master/src/test/resources/schemas/EuropeanBankIdentity.json'
+      bidSchemaUri: 'https://raw.githubusercontent.com/walt-id/waltid-ssikit-vclib/master/src/test/resources/schemas/EuropeanBankIdentity.json',
+      europassSchemaUri: 'https://raw.githubusercontent.com/walt-id/waltid-ssikit-vclib/master/src/test/resources/schemas/Europass.json'
 
     }
   },
